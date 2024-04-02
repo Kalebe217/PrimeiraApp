@@ -26,11 +26,11 @@ public class MainActivity extends AppCompatActivity {
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {//acionado ao clicar o botao
-                EditText etDigiteAqui = findViewById(R.id.etDigiteAqui);
-                String textoDigitado = etDigiteAqui.getText().toString();
-                Intent i = new Intent(MainActivity.this, nextActivity.class);
-                i.putExtra("texto",textoDigitado);
-                startActivity(i);
+                EditText etDigiteAqui = findViewById(R.id.etDigiteAqui);//obtem o editText da tela
+                String textoDigitado = etDigiteAqui.getText().toString();//obtem o string
+                Intent i = new Intent(MainActivity.this, nextActivity.class);//cria intencao
+                i.putExtra("texto",textoDigitado);//adciona string na intent
+                startActivity(i);// manda intent para android
             }
         });
     }
